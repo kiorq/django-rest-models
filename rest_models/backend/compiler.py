@@ -646,7 +646,7 @@ class SQLCompiler(BaseSQLCompiler):
 
     META_NAME = 'meta'
 
-    def __init__(self, query, connection, using):
+    def __init__(self, query, connection, using, elide_empty=True):
         """
         :param django.db.models.sql.query.Query query: the query
         :param rest_models.backend.base.DatabaseWrapper connection: the connection
