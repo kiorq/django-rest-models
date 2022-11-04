@@ -78,6 +78,8 @@ def get_resource_path(model, pk=None):
     ret = getattr(model.APIMeta, 'resource_path', None) or get_resource_name(model, False)
     if pk is not None:
         ret += "/%s/" % pk
+    else:
+        ret += "/"
     return ret
 
 
